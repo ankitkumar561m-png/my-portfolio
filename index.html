@@ -630,13 +630,282 @@
   }
 
   /* MOBILE */
-  @media (max-width: 768px) {
-    nav { padding: 1.2rem 1.5rem; }
-    .nav-links { display: none; }
-    section, #hero { padding: 5rem 1.5rem 3rem; }
-    footer { padding: 1.5rem; flex-direction: column; gap: 0.5rem; text-align: center; }
-    .hero-stats { gap: 2rem; }
-    .projects-grid, .skills-grid, .ach-grid, .edu-grid { grid-template-columns: 1fr; }
+  @media (max-width: 900px) {
+    nav {
+      padding: 1rem 1.25rem;
+    }
+
+    .nav-links {
+      display: none;
+    }
+
+    #hero {
+      min-height: auto;
+      padding: 7rem 1.25rem 3.5rem;
+    }
+
+    section,
+    #contact {
+      padding: 4.5rem 1.25rem;
+    }
+
+    .hero-bg-grid {
+      background-size: 38px 38px;
+    }
+
+    .hero-glow {
+      width: 360px;
+      height: 360px;
+      top: -80px;
+      right: -180px;
+    }
+
+    .hero-glow2,
+    .contact-glow {
+      width: 280px;
+      height: 280px;
+    }
+
+    .hero-tag {
+      font-size: 0.62rem;
+      line-height: 1.6;
+      letter-spacing: 0.16em;
+      margin-bottom: 1rem;
+    }
+
+    .hero-name {
+      font-size: clamp(3.2rem, 19vw, 5rem);
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-desc {
+      font-size: 1.08rem;
+      line-height: 1.55;
+      margin-top: 1.5rem;
+      max-width: 100%;
+    }
+
+    .hero-cta {
+      flex-direction: column;
+      gap: 0.85rem;
+      margin-top: 2rem;
+    }
+
+    .btn-primary,
+    .btn-ghost {
+      width: 100%;
+      justify-content: center;
+      padding: 0.9rem 1rem;
+      min-height: 48px;
+      text-align: center;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.8rem;
+      margin-top: 3rem;
+    }
+
+    .stat-num {
+      font-size: clamp(1.55rem, 8vw, 2rem);
+    }
+
+    .stat-label {
+      font-size: 0.58rem;
+      line-height: 1.4;
+      overflow-wrap: anywhere;
+    }
+
+    .section-label {
+      font-size: 0.58rem;
+      line-height: 1.5;
+      letter-spacing: 0.16em;
+    }
+
+    .section-title {
+      font-size: clamp(2.15rem, 12vw, 3rem);
+      margin-bottom: 2.25rem;
+    }
+
+    .skills-grid,
+    .projects-grid,
+    .ach-grid,
+    .edu-grid {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .skill-card,
+    .project-card,
+    .ach-card,
+    .edu-card,
+    .timeline-item {
+      padding: 1.35rem;
+    }
+
+    .skill-tags,
+    .project-stack {
+      gap: 0.35rem;
+    }
+
+    .tag,
+    .stack-pill {
+      line-height: 1.35;
+      overflow-wrap: anywhere;
+    }
+
+    .timeline {
+      padding-left: 1rem;
+    }
+
+    .timeline-item {
+      border-left: 1px solid var(--border);
+    }
+
+    .timeline-dot {
+      left: -1.35rem;
+      top: 1.55rem;
+    }
+
+    .exp-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .exp-title,
+    .project-title,
+    .edu-degree {
+      overflow-wrap: anywhere;
+    }
+
+    .exp-role,
+    .exp-bullets li,
+    .project-desc,
+    .edu-school,
+    .contact-sub {
+      line-height: 1.65;
+    }
+
+    .project-number {
+      font-size: 3.6rem;
+      right: 0.8rem;
+    }
+
+    .ach-card {
+      gap: 0.9rem;
+    }
+
+    .ach-icon-wrap {
+      width: 38px;
+      height: 38px;
+    }
+
+    .edu-card {
+      padding-bottom: 4.25rem;
+      min-height: 210px;
+    }
+
+    .edu-score {
+      bottom: 1.35rem;
+      right: 1.35rem;
+    }
+
+    .contact-title {
+      font-size: clamp(2.25rem, 13vw, 3.4rem);
+      line-height: 1.02;
+      letter-spacing: -0.03em;
+    }
+
+    .contact-links {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0.75rem;
+      margin-bottom: 3rem;
+    }
+
+    .contact-item {
+      width: 100%;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0.8rem 0.9rem;
+      line-height: 1.4;
+      overflow-wrap: anywhere;
+      text-align: center;
+    }
+
+    .marquee-track {
+      animation-duration: 22s;
+    }
+
+    .marquee-item {
+      font-size: 0.62rem;
+      gap: 1.4rem;
+      padding: 0 1.4rem;
+      letter-spacing: 0.14em;
+    }
+
+    footer {
+      padding: 1.5rem 1.25rem;
+      flex-direction: column;
+      gap: 0.55rem;
+      text-align: center;
+      line-height: 1.5;
+    }
+  }
+
+  @media (max-width: 420px) {
+    #hero {
+      padding-top: 6.5rem;
+    }
+
+    .hero-name {
+      font-size: clamp(2.9rem, 20vw, 4.2rem);
+    }
+
+    .hero-stats {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      text-align: left;
+    }
+
+    .hero-stats > div {
+      border-left: 1px solid rgba(0,229,255,0.18);
+      padding-left: 0.9rem;
+    }
+
+    .skill-card,
+    .project-card,
+    .ach-card,
+    .edu-card,
+    .timeline-item {
+      padding: 1.15rem;
+    }
+
+    .ach-card {
+      flex-direction: column;
+    }
+
+    .edu-card {
+      padding-bottom: 4rem;
+    }
+
+    .edu-score {
+      bottom: 1.15rem;
+      right: 1.15rem;
+    }
+  }
+
+  @media (hover: none), (pointer: coarse) {
+    body {
+      cursor: auto;
+    }
+
+    #cursor,
+    #cursor-trail {
+      display: none;
+    }
   }
 
   /* SCROLLBAR */
@@ -718,7 +987,7 @@
 
   <div class="hero-stats">
     <div>
-      <div class="stat-num">3+</div>
+      <div class="stat-num">10+</div>
       <div class="stat-label">Projects Built</div>
     </div>
     <div>
@@ -828,6 +1097,25 @@
       <div class="timeline-dot"></div>
       <div class="exp-header">
         <div>
+          <div class="exp-title"><span class="exp-company">ITC Infotech</span></div>
+          <div class="exp-role">AI Automation Intern · Delhi, India</div>
+        </div>
+        <span class="exp-period">Oct 2025 – Dec 2025</span>
+      </div>
+      <ul class="exp-bullets">
+        <li>Developed and deployed enterprise automation bots using AutomationEdge, significantly reducing manual operational workload across internal teams.</li>
+        <li>Designed scalable workflows for complex tasks including automated email parsing, data consolidation, and system cleanup.</li>
+        <li>Implemented rule-based and NLP-driven automation to power customer service chatbots, improving initial response times and resolution efficiency.</li>
+        <li>Optimized multi-departmental workflows by eliminating repetitive manual processes and reducing human error rates.</li>
+      </ul>
+    </div>
+
+     <!-- Job 3 -->
+  </div>
+   <div class="timeline-item reveal">
+      <div class="timeline-dot"></div>
+      <div class="exp-header">
+        <div>
           <div class="exp-title"><span class="exp-company">Intec Infonet Pvt. Ltd</span></div>
           <div class="exp-role">Network Associate Intern · Delhi, India</div>
         </div>
@@ -881,17 +1169,17 @@
 
     <div class="project-card reveal">
       <div class="project-number">03</div>
-      <span class="project-tag-top">Machine Learning</span>
-      <div class="project-title">Insurance Cost Prediction Model</div>
-      <p class="project-desc">Regression model explaining ~77% variation in insurance charges. End-to-end EDA, preprocessing, and feature engineering with the full Python data science stack.</p>
+      <span class="project-tag-top">Artificial Intelligence / Machine Learning</span>
+      <div class="project-title">Local Windows AI Assistant - Shiva.ai</div>
+      <p class="project-desc">Built Shiva.ai, a local Windows AI assistant that uses voice and chat commands to automate PC tasks with permission-first safety controls.</p>
       <div class="project-stack">
-        <span class="stack-pill">Scikit-learn</span>
-        <span class="stack-pill">Pandas</span>
-        <span class="stack-pill">NumPy</span>
-        <span class="stack-pill">Seaborn</span>
-        <span class="stack-pill">Regression</span>
+        <span class="stack-pill">Python</span>
+        <span class="stack-pill">Pydantic</span>
+        <span class="stack-pill">SQLite</span>
+        <span class="stack-pill">FastAPI</span>
+        <span class="stack-pill">PyAutoGUI</span>
       </div>
-      <a href="https://github.com/ankitkumar561m-png/Insurance-Price-Prediction" class="project-link">View on GitHub ↗</a>
+      <a href="https://github.com/ankitkumar561m-png/Shiva-V1-AI-Assistant" class="project-link">View on GitHub ↗</a>
     </div>
   </div>
 </section>
